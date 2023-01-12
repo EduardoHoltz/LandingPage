@@ -1,0 +1,408 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Anybody', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+:root {
+    --background: #121214;
+    --default-text: #ffffff;
+    --default-link: #1774b6;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: var(--background);
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    padding: 10px 2% 40px 2%;
+    background-color: #121214;
+}
+
+/* INITIAL - MAIN LOGO*/
+.main-logo {
+    float: left;
+    width: 100px;
+    height: 70px;
+    padding: 20px 2%;
+}
+
+.main-logo h3 {
+    font-weight: normal;
+    font-size: 19px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--default-text);
+}
+
+.main-logo h3 span {
+    transition: 2s ease-out;
+}
+
+.main-logo h3:hover span:nth-child(1) {
+    /*first child: margin-right 5px*/
+    margin-right: 5px;
+}
+
+.main-logo h3:hover span:nth-child(1)::after {
+    /*insert ' on first child*/
+    content: "'";
+}
+
+.main-logo h3:hover span:nth-child(2) {
+    /*second child: margin left 7px*/
+    margin-left: 4px;
+}
+
+.main-logo h3:hover span {
+    /*all childs insert white color and shadow*/
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
+}
+
+.secondary-logo {
+    float: right;
+    width: 100px;
+    height: 70px;
+    padding: 20px 2%;
+}
+
+.secondary-logo a {
+    text-decoration: none;
+    color: var(--default-text);
+    font-size: 19px;
+}
+
+.secondary-logo a:hover {
+    opacity: 0.8;
+    border-bottom: 0.5px solid #444;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+section.cover-form {
+    width: 100%;
+}
+
+.bg {
+    position: relative;
+    height: 550px;
+    background-image: url('../imgs/bg\ -\ 3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    transition: 05s height, ease 1s;
+}
+
+.bg:hover {
+    height: 500px;
+    opacity: 0.8;
+}
+
+.form-container {
+    position: absolute;
+    right: 30px;
+    top: -2.5%;
+    width: 400px;
+    height: 105%;
+    top: -5%;
+    background-color: #1c1c1f;
+    -webkit-box-shadow: 6px 6px 8px 0px black;
+    -moz-box-shadow: 6px 6px 8px 0px black;
+    box-shadow: 6px 6px 8px 0px black;
+    animation: animates 4s infinite linear;
+    animation-delay: 2s;
+}
+
+
+@keyframes animates {
+    0% {
+        box-shadow: 0px 0px 2px 2px black;
+    }
+
+    25% {
+        box-shadow: 1px 1px 4px 4px black;
+    }
+
+    50% {
+        box-shadow: 2px 2px 6px 6px black;
+    }
+
+    100% {
+        box-shadow: 0px 0px 2px 2px black;
+    }
+}
+
+.form-container h2 {
+    padding: 25px 15px;
+    color: var(--default-text);
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+
+.form-container form {
+    margin-top: 8px;
+    padding: 15px;
+}
+
+.form-container p {
+    font-size: 19px;
+    color: var(--default-text);
+}
+
+.form-wraper:not(:first-child) {
+    margin-top: 30px;
+}
+
+.form-container form input[type=text],
+.form-container form input[type=email],
+.form-container form input[type=tel] {
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-container form button[type=submit] {
+    cursor: pointer;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--default-text);
+    width: 50%;
+    height: 40px;
+    font-size: 17px;
+    border: none;
+    margin: 25px 25%;
+}
+
+section.call {
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+section.call .arrow{
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background-size: 100% 100%;
+    background-image: url('../imgs/arrow.png');
+}
+
+
+section.call .container {
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    padding: 40px 0 30px 0;
+}
+
+section.call h2 {
+    width: 98%;
+    max-width: 700px;
+    display: inline-block;
+    color: var(--default-text);
+    font-size: 25px;
+    font-weight: normal;
+}
+
+section.call p {
+    width: 98%;
+    max-width: 700px;
+    display: inline-block;
+    color: var(--default-text);
+    font-size: 25px;
+    margin-top: 9px;
+}
+
+section.mosaic .flex {
+    display: flex;
+}
+
+section.mosaic .item-1:first-child,
+section.mosaic .item-3,
+section.mosaic .item-4,
+section.mosaic .item-6 {
+    background-image: url('../imgs/bg\ -\ 8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60%;
+}
+
+section.mosaic .item-3 {
+    order: 1;
+}
+
+section.mosaic .item-2:nth-child(2),
+section.mosaic .item-5,
+section.mosaic .item-7 {
+    width: 40%;
+    padding: 60px 40px;
+    background-color: var(--default-link);
+}
+
+section.mosaic .item-2 p,
+section.mosaic .item-5 p,
+section.mosaic .item-7 p {
+    color: var(--default-text);
+    font-size: 25px;
+    text-align: center;
+}
+
+section.mosaic .item-6 {
+    order: 7;
+}
+
+section.end {
+    padding: 30px 0;
+}
+
+section.end .container .pad {
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--default-link);
+}
+
+section.end .pad a:nth-child(1) {
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-right: 40px;
+    letter-spacing: 2px;
+}
+
+section.end .pad a {
+    text-decoration: none;
+    color: var(--default-text);
+    font-size: 17px;
+    padding: 0 2%;
+}
+
+section.end .pad a:hover {
+    border-bottom: 1px solid #0093E9;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: #0093E9;
+}
+
+.container-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social {
+    float: left;
+    width: 33.333%;
+    padding: 15px;
+}
+
+.social i {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--default-text);
+}
+
+
+/*media querys*/
+
+@media screen and (max-width: 510px) {
+
+    header {
+        text-align: center;
+    }
+
+    .main-logo,
+    .secondary-logo {
+        display: inline-block;
+        /*both elements in the same space, insert another div on html*/
+        float: none;
+        margin-top: 10px;
+    }
+
+    .bg {
+        transition: 15s height, linear 1s;
+    }
+
+ 
+    section.call {
+        z-index: 0;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    section.mosaic .flex {
+        display: block;
+    }
+
+    section.mosaic .item-1:first-child,
+    section.mosaic .item-3,
+    section.mosaic .item-4,
+    section.mosaic .item-6 {
+        width: 100%;
+        padding-top: 80%;
+    }
+
+    section.mosaic .item-2:nth-child(2),
+    section.mosaic .item-5,
+    section.mosaic .item-7 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .bg {
+        text-align: center;
+        padding: 40px 0;
+        height: auto;
+    }
+
+    .form-container {
+        /*static para resetar e display inline-block para centralizar*/
+        position: static;
+        display: inline-block;
+        width: 96%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    section.call .container {
+        background-color: #1774b6;
+        padding: 80px 0 30px 0;
+    }
+}
